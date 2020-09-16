@@ -1,5 +1,7 @@
 package pe.edu.upc.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Reserva")
-public class Reserva {
+public class Reserva { 
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
