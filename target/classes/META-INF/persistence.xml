@@ -6,6 +6,7 @@
 	<persistence-unit name="Trabajo_Parcial">
 		<class>pe.edu.upc.entity.Cliente</class>
 		<class>pe.edu.upc.entity.Empresa</class>
+		<class>pe.edu.upc.entity.TipoPago</class>
 	</persistence-unit>
 
 </persistence>

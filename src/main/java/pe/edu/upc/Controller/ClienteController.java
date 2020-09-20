@@ -8,15 +8,15 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import pe.edu.upc.daointerface.IClienteDao;
 import pe.edu.upc.entity.Cliente;
+import pe.edu.upc.serviceinterface.IClienteService;
 
 
 @Named
 @RequestScoped
 public class ClienteController {
 	@Inject
-	private IClienteDao cService;
+	private IClienteService cService;
 	private Cliente c;
 	List<Cliente> listClientes;
 	

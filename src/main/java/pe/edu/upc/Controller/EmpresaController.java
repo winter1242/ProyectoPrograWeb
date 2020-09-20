@@ -8,8 +8,9 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import pe.edu.upc.daointerface.IEmpresaDao;
+
 import pe.edu.upc.entity.Empresa;
+import pe.edu.upc.serviceinterface.IEmpresaService;
 
 
 
@@ -17,7 +18,7 @@ import pe.edu.upc.entity.Empresa;
 @RequestScoped
 public class EmpresaController {
 	@Inject
-	private IEmpresaDao eService;
+	private IEmpresaService eService;
 	private Empresa e;
 	List<Empresa> listEmpresas;
 	
