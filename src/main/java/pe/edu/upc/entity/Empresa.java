@@ -1,5 +1,7 @@
 package pe.edu.upc.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,48 +9,59 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name="Empresa")
-public class Empresa {
-	
+@Table(name = "Empresa")
+public class Empresa implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int idEmpresa;
-	@Column (name="RUCEmpresa",nullable=false,length=35)
-	private String RUCEmpresa;
-	@Column (name="razonSocial",nullable=true,length=35)
-	private String razonSocial;
-	@Column (name="descripcionEmpresa",nullable=true,length=35)
-	private String descripcionEmpresa;
+	@Column(name = "nameEmpresa", nullable = false, length = 45)
+	private String nameEmpresa;
+	@Column(name = "rucEmpresa", nullable = false, length = 45)
+	private String rucEmpresa;
+	
 	public Empresa() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+	public Empresa(int idEmpresa, String nameEmpresa, String rucEmpresa) {
+		super();
+		this.idEmpresa = idEmpresa;
+		this.nameEmpresa = nameEmpresa;
+		this.rucEmpresa = rucEmpresa;
+	}
+
 	public int getIdEmpresa() {
 		return idEmpresa;
 	}
+
 	public void setIdEmpresa(int idEmpresa) {
 		this.idEmpresa = idEmpresa;
 	}
-	public String getRUCEmpresa() {
-		return RUCEmpresa;
+
+	public String getNameEmpresa() {
+		return nameEmpresa;
 	}
-	public void setRUCEmpresa(String rUCEmpresa) {
-		RUCEmpresa = rUCEmpresa;
+
+	public void setNameEmpresa(String nameEmpresa) {
+		this.nameEmpresa = nameEmpresa;
 	}
-	public String getRazonSocial() {
-		return razonSocial;
+
+	public String getRucEmpresa() {
+		return rucEmpresa;
 	}
-	public void setRazonSocial(String razonSocial) {
-		this.razonSocial = razonSocial;
+
+	public void setRucEmpresa(String rucEmpresa) {
+		this.rucEmpresa = rucEmpresa;
 	}
-	public String getDescripcionEmpresa() {
-		return descripcionEmpresa;
-	}
-	public void setDescripcionEmpresa(String descripcionEmpresa) {
-		this.descripcionEmpresa = descripcionEmpresa;
-	}
-	
+
 	
 
 }
